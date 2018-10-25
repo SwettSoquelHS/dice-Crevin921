@@ -49,83 +49,143 @@ class Die {
 		//your code here, 
 		//should randomly assign a value from 1 to 6
     //DICE VALUES//
-    int d1 = (int)(Math.random() * 6); 
-    int d2 = (int)(Math.random() * 6);
-    int d3 = (int)(Math.random() * 6);
-    int d4 = (int)(Math.random() * 6);
-    int d5 = (int)(Math.random() * 6);
-    int d6 = (int)(Math.random() * 6);
-    int d7 = (int)(Math.random() * 6);
-    int d8 = (int)(Math.random() * 6);
-    int d9 = (int)(Math.random() * 6);
-
+    int diceRoll = (int)(Math.random() * 7); 
+    
     //Array list//
-    int[]a = {d1,d2,d3,d4,d5,d6,d7,d8,d9};
     //function//
-    /*for (int i = 0; i < a.length; i++){
-      if(d1==1){
-        d1.dot1();
-      }
-      if (d1==2){
-        myDie.dot2();
-      }
-     }*/
+    
+     if(diceRoll==1){
+        dot1();
+     }
+     if (diceRoll==2){
+        dot2();
+     }
+     if (diceRoll==3){
+        dot3();
+     }
+     if (diceRoll==4){
+        dot4();
+     }
+     if (diceRoll==5){
+        dot5();
+     }
+     if (diceRoll==6){
+        dot6();
+     }
+  }
      
-   }
+   
 	
 	/*
 	  Use the randomly assigned roll value to draw the face of a die
 	*/
 	void show(){
+    
+    
 		d1.dice();
+    d1.roll();
+    
     d2.dice();
+    d2.roll();
+    
     d3.dice();
+    d3.roll();
+    
     d4.dice();
+    d4.roll();
+    
     d5.dice();
+    d5.roll();
+    
     d6.dice();
+    d6.roll();
+    
     d7.dice();
+    d7.roll();
+    
     d8.dice();
+    d8.roll();
+    
     d9.dice();
-}
+    d9.roll();
+    
+    
+  }
   void dice(){
     fill(255);
     rect(x_pos,y_pos,300,300);
     
    }
-  /*void dice2(){
-    fill(255);
-    rect(20,370,300,300);
-    myDie.roll();
-}
-  void dice3(){
-    rect(20,690,300,300);
-    }
-  void dice4(){
-    rect(350,50,300,300);
-  }
-  void dice5(){
-    rect(350,370,300,300);
-  }
-  void dice6(){
-    rect(350,690,300,300);
-  }
-  void dice7(){
-    rect(680,50,300,300);
-  }
-  void dice8(){
-    rect(680,370,300,300);
-  }
-  void dice9(){
-    rect(680,690,300,300);
-   } 
-   //Dots//
+   //Dots
    void dot1(){
+     pushMatrix();
+     translate(x_pos,y_pos);
+     
      fill(0);
-     ellipse(175, 185, 70, 70);
+     ellipse(150, 150, 70, 70);
+     popMatrix();
    }
    void dot2(){
+     pushMatrix();
+     translate(x_pos,y_pos);
+    
      fill(0);
-     ellipse(70, 100, 70, 70);
-     ellipse(270,300,70,70);
-   }*/
+     ellipse(65, 65, 70, 70);
+     ellipse(235,235,70,70);
+     popMatrix();
+   }
+   void dot3(){
+     pushMatrix();
+     translate(x_pos,y_pos);
+    
+     fill(0);
+     ellipse(65, 65, 70, 70);
+     ellipse(235,235,70,70);
+     ellipse(150, 150, 70, 70);
+     popMatrix();
+   }
+   void dot4(){
+     pushMatrix();
+     translate(x_pos,y_pos);
+    
+     fill(0);
+     ellipse(65, 65, 70, 70);
+     ellipse(235,235,70,70);
+     ellipse(235,65,70,70);
+     ellipse(65,235,70,70);
+     popMatrix();
+   }
+   void dot5(){
+     pushMatrix();
+     translate(x_pos,y_pos);
+    
+     fill(0);
+     ellipse(65, 65, 70, 70);
+     ellipse(235,235,70,70);
+     ellipse(150, 150, 70, 70);
+     ellipse(235,65,70,70);
+     ellipse(65,235,70,70);
+     popMatrix();
+   }
+   void dot6(){
+     pushMatrix();
+     translate(x_pos,y_pos);
+    
+     fill(0);
+     ellipse(65, 65, 70, 70);
+     ellipse(65,235,70,70);
+     ellipse(65,150,70,70);
+     
+     ellipse(235,235,70,70);
+     ellipse(235,65,70,70);
+     ellipse(235,150,70,70);
+     
+     ellipse(150,150, 70, 70);
+     ellipse(150,65,70,70);
+     ellipse(150,235,70,70);
+     
+     
+     
+     popMatrix();
+   }
 }
